@@ -14,10 +14,19 @@ namespace PrsEf.Migrations
 
         protected override void Seed(PrsEf.PrsDbContext context) //this will seed the table with data (e.g., a new user admin each time table created)
         {
-            //  This method will be called after migrating to the latest version.
+			//  This method will be called after migrating to the latest version.
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data.
-        }
-    }
+			//////////////////////////////////////////////
+			//seeding a vendor
+			//Vendor addVendor = new Vendor("MSFT", "Microsoft", "1 Microsoft Way", "Redmond", "WA", "98052", "425-882-8080", "msft@hotmail.com", true, true);
+			//Vendor addedVendor = db.Vendors.Add(addVendor);
+
+			//save changes to the database
+			//db.SaveChanges(); //adds the above user to the database
+			//////////////////////////////////////////////
+
+			//  You can use the DbSet<T>.AddOrUpdate() helper extension method 
+			//  to avoid creating duplicate seed data.
+		}
+	}
 }
