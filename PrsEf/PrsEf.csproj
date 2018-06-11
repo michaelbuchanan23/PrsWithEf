@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1B419B08-75E8-46DF-957B-E8D79225FF35}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>PrsWithEf</RootNamespace>
-    <AssemblyName>PrsWithEf</AssemblyName>
+    <ProjectGuid>{F5ED1841-BCE9-4ACB-BD08-564F1EE78A3E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PrsEf</RootNamespace>
+    <AssemblyName>PrsEf</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -49,18 +47,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Migrations\201806111437019_Initialization.cs" />
+    <Compile Include="Migrations\201806111437019_Initialization.Designer.cs">
+      <DependentUpon>201806111437019_Initialization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="PrsDbContext.cs" />
+    <Compile Include="PrsEntityFramework.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PrsEf\PrsEf.csproj">
-      <Project>{f5ed1841-bce9-4acb-bd08-564f1ee78a3e}</Project>
-      <Name>PrsEf</Name>
-    </ProjectReference>
+    <EmbeddedResource Include="Migrations\201806111437019_Initialization.resx">
+      <DependentUpon>201806111437019_Initialization.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
