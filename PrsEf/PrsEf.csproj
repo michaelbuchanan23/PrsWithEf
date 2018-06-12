@@ -67,13 +67,25 @@
     <Compile Include="Migrations\201806111940140_added product.Designer.cs">
       <DependentUpon>201806111940140_added product.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806121329557_added purchase request.cs" />
+    <Compile Include="Migrations\201806121329557_added purchase request.Designer.cs">
+      <DependentUpon>201806121329557_added purchase request.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806121412507_added purchase request line item.cs" />
+    <Compile Include="Migrations\201806121412507_added purchase request line item.Designer.cs">
+      <DependentUpon>201806121412507_added purchase request line item.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="PrsDbContext.cs" />
     <Compile Include="PrsEntityFramework.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseRequest.cs" />
+    <Compile Include="PurchaseRequestLineitem.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="UsersController.cs" />
     <Compile Include="Vendor.cs" />
+    <Compile Include="VendorController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -94,6 +106,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806111940140_added product.resx">
       <DependentUpon>201806111940140_added product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806121329557_added purchase request.resx">
+      <DependentUpon>201806121329557_added purchase request.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806121412507_added purchase request line item.resx">
+      <DependentUpon>201806121412507_added purchase request line item.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
